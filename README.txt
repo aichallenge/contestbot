@@ -1,0 +1,1 @@
+This plugin contains commands relating to the Google AI Challenge, and includes: a top 10 list.
