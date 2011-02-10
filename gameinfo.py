@@ -23,4 +23,4 @@ def gameinfo(gameid,withlink=False):
 	
 	return reply
 
-print gameinfo(4415957,True)
+#print gameinfo(4415957,True)
