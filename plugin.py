@@ -52,7 +52,8 @@ class AIChallenge(callbacks.Plugin):
 			irc.error("Cannot do that many players.")
 		else:
 			try:
-				irc.reply("Top %s players: %s" % (howmany,', '.join(["%s(%s)" % (rank[1],rank[4]) for rank in rankingsGetter()[:howmany]])))
+				print repr(howmany)
+				irc.reply("Top %s players: %s" % (howmany,', '.join(["%s(%.1f)" % (user["username"],float(user["skill"])) for user in rankingsGetter()[:howmany]])))
 			except URLError:
 				irc.error("There was a problem accessing the interface to ai-contest.com")
 	rankings = wrap(rankings, [optional('int',10)])
